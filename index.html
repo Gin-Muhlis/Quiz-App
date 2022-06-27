@@ -5,9 +5,40 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/64f5e4ae10.js" crossorigin="anonymous"></script>
     <title>Quiz App - By G</title>
 </head>
 <body>
-    
+    <!-- !efek loading ketika user masuk ke website -->
+    <div class="loader"></div>
+
+    <!-- !Form user memasukkan nama dan umur dan some motivation sebelum memulai quiz -->
+    <div class="box-form">
+        <div class="col-2 motivation">
+            <img src="assets/quote.png" alt="quote" class="quote">
+            <p class="quote-text">Waktumu terbatas, jadi jangan sia-siakan dengan menjalani hidup orang lain. Jangan terjebak oleh dogma</p>
+            <div class="people">
+                <h3 class="name-quote-people">Steve Jobs</h3>
+                <span class="title-quote-people">Tokoh Bisnis</span>
+                <img src="assets/0.jpg" alt="people" class="image-quote-people">
+            </div>
+        </div>
+        <div class="col-2 input">
+            <h1>Quizz App - By G</h1>
+            <label for="nama">
+                <input type="text" name="nama" id="nama">
+                <span>Nama</span>
+            </label>
+            <label for="sekolah">
+                <input type="text" name="sekolah" id="sekolah">
+                <span>Nama sekolah</span>
+            </label>
+            <div class="button">
+                <button class="btn">Mulai Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
 </body>
 </html>

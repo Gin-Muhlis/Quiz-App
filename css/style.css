@@ -1,0 +1,180 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffda63;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* !Loader */
+.loader {
+    width: 60px;
+    height: 60px;
+    border: 5px solid transparent;
+    border-top-color: #080818;
+    border-bottom-color: #080818;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    animation: loader 1s infinite;
+    -webkit-animation: loader 1s infinite;
+    display: none;
+}
+
+@keyframes loader {
+    from {
+        transform: translate(-50%, -50%) rotate(0turn);
+        -webkit-transform: translate(-50%, -50%) rotate(0turn);
+        -moz-transform: translate(-50%, -50%) rotate(0turn);
+        -ms-transform: translate(-50%, -50%) rotate(0turn);
+        -o-transform: translate(-50%, -50%) rotate(0turn);
+    }
+    to {
+        transform: translate(-50%, -50%) rotate(1turn);
+        -webkit-transform: translate(-50%, -50%) rotate(1turn);
+        -moz-transform: translate(-50%, -50%) rotate(1turn);
+        -ms-transform: translate(-50%, -50%) rotate(1turn);
+        -o-transform: translate(-50%, -50%) rotate(1turn);
+    }
+
+}
+
+@media screen and (max-width: 400px)  {
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+/* !Form Section */
+.box-form {
+    width: 780px;
+    height: 420px;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+    overflow: hidden;
+    border-radius: 7px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.box-form .col-2 {
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.motivation .quote {
+    width: 50px;
+    height: 50px;
+    align-self: flex-start;
+    margin-bottom: 20px;
+}
+
+.motivation .quote-text {
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 29px;
+    margin-bottom: 60px;
+}
+
+.motivation .people {
+    width: 100%;
+    justify-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.motivation .name-quote-people {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 0;
+    margin-bottom: 8px;
+}
+
+.motivation .title-quote-people {
+    font-size: 13px;
+    color: rgba(0, 0, 0, .7);
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.motivation .image-quote-people {
+    width: 80px;
+    height: 80px;
+    filter: grayscale(1);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    -webkit-filter: grayscale(1);
+}
+
+.box-form .input {
+    background: crimson;
+}
+
+.input h1 {
+    font-size: 22px;
+    color: #fff;
+    margin-bottom: 80px;
+}
+
+.input label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.input label span {
+    order: -1;
+    color: #fff;
+    font-size: 15px;
+    margin-bottom: 10px;
+    margin-left: 25px;
+}
+
+.input label input {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    outline: none;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    width: 100%;
+    padding: 8px 25px;
+    color: #fff;
+}
