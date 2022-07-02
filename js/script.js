@@ -68,3 +68,26 @@ btn.addEventListener('click', () => {
     }, 1000)
 })
 
+// !Section question
+const DB_SOAL = [
+    {
+        question: 'Siapa orang terkaya di dunia?',
+        answer: ['Bill Gates', 'Elon Musk', 'Mark Zackerberg', 'Will Smith']
+    },
+    {
+        question: 'Untuk membuat 5 potong kue, Letek membutuhkan telur ½ kg. Berapa telur yang dibutuhkan Letek jika ingin membuat 50 potong kue?',
+        answer: ['5 kg', '10 kg', '6 kg', '50 kg']
+    },
+    {
+        question: 'Cara yang paling efisien untuk membuat object dan methodnya pada JS adalah dengan cara?',
+        answer: ['Object Literal', 'Function Declaration', 'Class', 'Object Constructor']
+    },
+    {
+        question: 'Nama mata uang Jerman?',
+        answer: ['Euro', 'Dolar', 'Rupiah', 'Rupee']
+    },
+    {
+        question: 'Nama aktor yang memerankan Thor di Avengers?',
+        answer: ['Robert Downey Jr.', 'Chris Evan', 'Mark Ruffalo', 'Chris Hemsworth']
+    }
+]

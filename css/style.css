@@ -354,6 +354,7 @@ body {
 /* !section pertanyaan */
 section {
     max-width: 600px;
+    width: 100%;
     padding: 40px;
     background: #fff;
     position: absolute;
@@ -449,12 +450,15 @@ input[type="radio"] {
 
 .choices-answer .answer {
     position: relative;
+}
+
+.answer .choiceText {
     display: flex;
     justify-content: flex-start;
     align-items: center;
 }
 
-.answer .choiceText {
+.choiceText span {
     font-size: 18px;
     font-weight: 500;
     color: #080838;
