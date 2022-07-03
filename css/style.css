@@ -353,6 +353,8 @@ body {
 
 /* !section pertanyaan */
 section {
+    opacity: 0;
+    pointer-events: none;
     max-width: 600px;
     width: 100%;
     padding: 40px;
@@ -370,6 +372,16 @@ section {
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+section.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 section .header-question {
@@ -498,11 +510,6 @@ input[type="radio"] {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-    transition: all .5s;
-    -webkit-transition: all .5s;
-    -moz-transition: all .5s;
-    -ms-transition: all .5s;
-    -o-transition: all .5s;
 }
 
 #choice0:checked ~ .check-0,
