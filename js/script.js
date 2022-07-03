@@ -59,12 +59,18 @@ quoteRandom();
 // !sistem button start quiz
 const btn = document.querySelector('.button .btn');
 const boxRule = document.querySelector('.pop-up');
+const username = document.querySelector('#nama').value;
+const password = document.querySelector('#sekolah').value;
 
 btn.addEventListener('click', () => {
-    boxForm.classList.remove('show');
-    setTimeout(() => {
-        boxRule.classList.add('show');
-    }, 1000)
+    if (username.length > 0 && password.length > 0) {
+        boxForm.classList.remove('show');
+        setTimeout(() => {
+            boxRule.classList.add('show');
+        }, 1000)
+    } else {
+        alert('anda harus mengisi data dulu')
+    }
 })
 
 // ! sistem button ok untuk memulai pertanyaan
@@ -73,9 +79,16 @@ document.querySelector('.ok').addEventListener('click', () => {
     setTimeout(() => {
         document.querySelector('#question-section').classList.add('show');
     }, 1000)
+
     setupQuestion();
     numberQuestion();
+    let timer = setInterval(counter, 1000);
+    progressBar();
+
 })
+
+
+
 
 // !Section question
 const DB_SOAL = [{
@@ -146,17 +159,25 @@ function setupQuestion() {
 function nextQuestion() {
     currnetQ++;
 
+    // menjalankan fungsi number soal dinamis
     numberQuestion();
 
+    // menjalankan fungsi untuk menyimpan jawaban user
     userAnswer();
 
+    // menjalankan fungsi untuk mereset state
     resetState();
 
     if (currnetQ >= DB_SOAL.length) {
+        // menjalankan fungsi untuk memberhentikan quiz
         stopQuiz();
     }
 
+    // menjalankan fungsi untuk menampilkan soal selanjutnya
     setupQuestion()
+
+    // menjalankan fungsi untuk membuat progres bar yang dinamis
+    progressBar();
 }
 
 function stopQuiz() {
@@ -202,3 +223,31 @@ function numberQuestion() {
 }
 
 // !membuat fungsi untuk waktu pengerjaan soal
+let minute = 9;
+let second = 60;
+
+function counter() {
+    second--;
+
+    document.querySelector('.time').innerHTML = `0${minute} : ${second}`;
+
+    if (minute == 0 && second == 0) {
+        stopQuiz();
+    } else if (second === 0) {
+        document.querySelector('.time').innerHTML = `0${minute} : 0${second}`;
+        second = 60;
+        minute -= 1;
+    } else if (second < 10) {
+        document.querySelector('.time').innerHTML = `0${minute} : 0${second}`;
+    }
+}
+
+// !membuat progress bar yang dinamis
+let width = 10;
+
+function progressBar() {
+    document.querySelector('.bar').style.width = `${width}%`;
+
+    width += 10;
+
+}
