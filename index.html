@@ -26,11 +26,11 @@
         <div class="col-2 input">
             <h1>Quizz App - By G</h1>
             <label for="nama">
-                <input type="text" name="nama" id="nama" required>
+                <input type="text" name="nama" id="nama" required minlength="2">
                 <span>Nama</span>
             </label>
             <label for="sekolah">
-                <input type="text" name="sekolah" id="sekolah" required>
+                <input type="text" name="sekolah" id="sekolah" required minlength="2">
                 <span>Sekolah</span>
             </label>
             <div class="button">
@@ -99,6 +99,32 @@
         </div>
     </section>
 
-    <script src="js/script.js"></script>
+    <!-- !box ketika quiz selesai -->
+    <div class="box-done">
+        <div class="inside">
+            <img src="assets/checked.png" alt="checked">
+            <h2>Quiz telah selesai!</h2>
+            <button class="done">Lihat hasil</button>
+        </div>
+    </div>
+
+    <!-- !box score -->
+    <div class="box-score">
+        <div class="profile">
+            <div class="name">
+                <p>Nama : <span class="name">Gin Gin N</span></p>
+                <p>Sekolah : <span class="school">SMKN 1 Cianjur</span></p>
+            </div>
+            <div class="grade">
+                <h3 class="hasil">90</h3>
+                <span>Kelasss</span>
+            </div>
+        </div>
+        <div class="review">
+
+        </div>
+    </div>
+
+    <!-- <script src="js/script.js"></script> -->
 </body>
 </html>

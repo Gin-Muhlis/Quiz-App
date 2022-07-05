@@ -560,3 +560,81 @@ section .footer-question {
 .footer-question .next-btn:hover {
     background-color: #080808;
 }
+
+.box-done {
+    opacity: 0;
+    pointer-events: none;
+    width: 480px;
+    padding: 30px;
+    overflow: hidden;
+    background: #fff;
+    border: 5px solid crimson;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.box-done.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.box-done .inside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.inside img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.inside h2 {
+    font-size: 22px;
+    color: #080808;
+    margin-bottom: 30px;
+}
+
+.inside .done {
+    outline: none;
+    padding: 7px 27px;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    background-color: #28a745;
+    border: 3px solid #28a745;
+    cursor: pointer;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+}
+
+
+.inside .done:hover {
+    transform: scale(0.95);
+    -webkit-transform: scale(0.95);
+    -moz-transform: scale(0.95);
+    -ms-transform: scale(0.95);
+    -o-transform: scale(0.95);
+}

@@ -59,18 +59,13 @@ quoteRandom();
 // !sistem button start quiz
 const btn = document.querySelector('.button .btn');
 const boxRule = document.querySelector('.pop-up');
-const username = document.querySelector('#nama').value;
-const password = document.querySelector('#sekolah').value;
 
 btn.addEventListener('click', () => {
-    if (username.length > 0 && password.length > 0) {
-        boxForm.classList.remove('show');
-        setTimeout(() => {
-            boxRule.classList.add('show');
-        }, 1000)
-    } else {
-        alert('anda harus mengisi data dulu')
-    }
+    boxForm.classList.remove('show');
+    setTimeout(() => {
+        boxRule.classList.add('show');
+    }, 1000)
+
 })
 
 // ! sistem button ok untuk memulai pertanyaan
@@ -149,8 +144,8 @@ function setupQuestion() {
     document.querySelector('.question').innerHTML = DB_SOAL[currnetQ]['question'];
 
     const choices = document.querySelectorAll('.choiceText span');
-    
-    for(let i = 0; i < choices.length; i++) {
+
+    for (let i = 0; i < choices.length; i++) {
         choices[i].innerHTML = DB_SOAL[currnetQ]['answer'][i];
     }
 }
@@ -181,10 +176,13 @@ function nextQuestion() {
 }
 
 function stopQuiz() {
-    
+
     checkScore();
 
-    alert(`Quiz telah selesai nilai anda ${grade}`);
+    document.querySelector('#question-section').classList.remove('show');
+    setTimeout(() => {
+        document.querySelector('.box-done').classList.add('show');
+    }, 500)
 }
 
 // !membuat fungsi untuk menyimpan jawaban yang dipilih user
