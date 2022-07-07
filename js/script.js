@@ -59,8 +59,14 @@ quoteRandom();
 // !sistem button start quiz
 const btn = document.querySelector('.button .btn');
 const boxRule = document.querySelector('.pop-up');
+const username = document.querySelector('#nama');
+const school = document.querySelector('#sekolah');
 
 btn.addEventListener('click', () => {
+    if (username.value == "" && school.value == "") {
+        alert('woi blok')
+        return;
+    }
     boxForm.classList.remove('show');
     setTimeout(() => {
         boxRule.classList.add('show');
@@ -247,5 +253,33 @@ function progressBar() {
     document.querySelector('.bar').style.width = `${width}%`;
 
     width += 10;
+}
+
+// !sistem melihat score
+function seeScore() {
+    document.querySelector('.box-done').classList.remove('show');
+
+    setTimeout(() => {
+        document.querySelector('.box-score').classList.add('show');
+        result();
+    }, 1000)
+}
+
+function result() {
+    const name = document.querySelector('#nama');
+    const sekolah = document.querySelector('#sekolah');
+
+    document.querySelector('.name').innerHTML = nama.value;
+    document.querySelector('.school').innerHTML = sekolah.value;
+    document.querySelector('.grade').innerHTML = grade;
+    if (grade >= 60 && grade < 70) {
+        document.querySelector('.support').innerHTML = 'Great!';
+    } else if (grade >= 70 && grade < 90) {
+        document.querySelector('.support').innerHTML = 'Excelent!';
+    } else if (grade >= 90) {
+        document.querySelector('.support').innerHTML = 'Amazing!';
+    } else {
+        document.querySelector('.support').innerHTML = 'Nice try';
+    }
 
 }
