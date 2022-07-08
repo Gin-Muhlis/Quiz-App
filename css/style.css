@@ -7,7 +7,7 @@
 }
 
 body {
-    min-height: 90vh;
+    min-height: 100vh;
     height: 100%;
     background-color: #ffda63;
     font-family: 'Poppins', sans-serif;
@@ -753,6 +753,10 @@ section .footer-question {
 }
 
 @media screen and (max-width: 400px) {
+    body {
+        min-height: 90vh;
+    }
+
     .motivation .quote-text {
         font-size: 16px;
         line-height: 24px;
