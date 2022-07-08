@@ -7,7 +7,8 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 90vh;
+    height: 100%;
     background-color: #ffda63;
     font-family: 'Poppins', sans-serif;
     padding: 50px 25px;
@@ -35,18 +36,18 @@ body {
 
 @keyframes loader {
     from {
-        transform: translate(-50%, -50%) rotate(0turn);
-        -webkit-transform: translate(-50%, -50%) rotate(0turn);
-        -moz-transform: translate(-50%, -50%) rotate(0turn);
-        -ms-transform: translate(-50%, -50%) rotate(0turn);
-        -o-transform: translate(-50%, -50%) rotate(0turn);
-    }
+        transform: rotate(0turn);
+        -webkit-transform: rotate(0turn);
+        -moz-transform: rotate(0turn);
+        -ms-transform: rotate(0turn);
+        -o-transform: rotate(0turn);
+}
     to {
-        transform: translate(-50%, -50%) rotate(1turn);
-        -webkit-transform: translate(-50%, -50%) rotate(1turn);
-        -moz-transform: translate(-50%, -50%) rotate(1turn);
-        -ms-transform: translate(-50%, -50%) rotate(1turn);
-        -o-transform: translate(-50%, -50%) rotate(1turn);
+        transform: rotate(1turn);
+        -webkit-transform: rotate(1turn);
+        -moz-transform: rotate(1turn);
+        -ms-transform: rotate(1turn);
+        -o-transform: rotate(1turn);
     }
 
 }
@@ -809,6 +810,7 @@ section .footer-question {
 
     .pop-up .pop-up-box {
         padding: 15px;
+        border: 3px solid crimson;
     }
 
     .pop-up-box h1 {
@@ -817,12 +819,12 @@ section .footer-question {
 
     .pop-up-box p {
         font-size: 14px;
+        margin-bottom: 15px;
     }
 
     .pop-up-box .ok {
         font-size: 12px;
-        padding: 4px 20px;
-        font-weight: 500;
+        padding: 4px 25px;
     }
 
     section {
@@ -830,20 +832,25 @@ section .footer-question {
     }
 
     .header-question .col-2 h3 {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .header-question .col-2 p {
-        font-size: 17px;
+        font-size: 16px;
     }
 
     .main-question .question {
-        font-size: 24px;
+        font-size: 22px;
         line-height: 30px;
+    }
+
+    .choiceText span {
+        font-size: 16px;
     }
 
     .box-done {
         padding: 15px;
+        border: 3px solid crimson;
     }
 
     .inside img {
@@ -901,25 +908,3 @@ section .footer-question {
         height: 3px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
