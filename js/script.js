@@ -64,7 +64,7 @@ const school = document.querySelector('#sekolah');
 
 btn.addEventListener('click', () => {
     if (username.value == "" && school.value == "") {
-        alert('woi blok')
+        document.querySelector('.validate').classList.add('show')
         return;
     }
     boxForm.classList.remove('show');
@@ -282,4 +282,11 @@ function result() {
         document.querySelector('.support').innerHTML = 'Nice try';
     }
 
+}
+
+// !menghilangkan box validate ketika user menekan tombol X
+const close = document.querySelector('.close');
+
+close.onclick = () => {
+    document.querySelector('.validate').classList.remove('show');
 }
